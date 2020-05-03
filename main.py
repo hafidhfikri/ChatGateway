@@ -9,6 +9,7 @@ def gateway(request):
     json_parse = request.get_json()
 
     print(type(json_parse))
+    print(json_parse)
 
     #Get Parameter
     #param = json_parse.get('queryResult', {}).get('intent', {}).get('displayName')
