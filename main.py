@@ -11,6 +11,8 @@ def gateway(request):
     #Get Parameter
     param = json_parse.get('queryResult', {}).get('intent', {}).get('displayName')
 
+    print("param")
+
     #Route Case
     if param == 'IPSearchEngine':
         #ke routing
