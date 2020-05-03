@@ -5,9 +5,10 @@ def gateway(request):
     #set default response
     response = json.dumps({'fulfillmentMessages':[{'text':{'text':['Gateway Error']}}]})
     
-    print(type(request))
     #get request payload
-    #json_parse = request 
+    json_parse = request.get_json()
+
+    print(type(json_parse))
 
     #Get Parameter
     #param = json_parse.get('queryResult', {}).get('intent', {}).get('displayName')
