@@ -5,15 +5,17 @@ def gateway(request):
     #set default response
     response = json.dumps({'fulfillmentMessages':[{'text':{'text':['Gateway Error']}}]})
     
+    print(type(request))
     #get request payload
-    json_parse = request 
+    #json_parse = request 
 
     #Get Parameter
-    param = json_parse.get('queryResult', {}).get('intent', {}).get('displayName')
+    #param = json_parse.get('queryResult', {}).get('intent', {}).get('displayName')
 
-    print("param")
+    #print("param")
 
     #Route Case
+    '''
     if param == 'IPSearchEngine':
         #ke routing
         response = json.dumps({'fulfillmentMessages':[{'text':{'text':['Mencari IP']}}]})
@@ -22,5 +24,5 @@ def gateway(request):
         response = json.dumps({'fulfillmentMessages':[{'text':{'text':['Mencari Error']}}]})
     else:
         response = json.dumps({'fulfillmentMessages':[{'text':{'text':['Punten, Mamang teu paham yeuh....']}}]})
-    
+    '''
     return response
